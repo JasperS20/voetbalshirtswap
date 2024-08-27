@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply bg-primary-color;
+    @apply text-base;
+    @apply text-text-color;
+}
+
+h1 {
+    @apply text-2xl font-bold md:text-4xl;
+}
+h2 {
+    @apply text-xl font-bold md:text-2xl;
+}
+h3 {
+    @apply text-lg font-bold md:text-xl;
+}
+h4 {
+    @apply text-base font-bold md:text-lg;
+}
+h5 {
+    @apply font-semibold;
+}
+a {
+    @apply cursor-pointer;
+}

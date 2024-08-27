@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
     </head>
-    <body>
+    <body class="bg-primary-color text-text-color">
         @include('layout.header')
         @yield('content')
         @include('layout.footer')
