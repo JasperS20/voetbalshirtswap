@@ -2,9 +2,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel</title>
+        <title>VoetbalShirtsSwap - @yield('title')</title>
+        @vite(['resources/js/app.js', 'resources/css/app.css'])
     </head>
-    <body class="bg-primary-color text-text-color">
+    <body>
         @include('layout.header')
         @yield('content')
         @include('layout.footer')
