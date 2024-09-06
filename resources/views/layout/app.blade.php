@@ -7,7 +7,9 @@
     </head>
     <body>
         @include('layout.header')
-        @yield('content')
+        <div class="mx-auto w-4/5">
+            @yield('content')
+        </div>
         @include('layout.footer')
     </body>
 </html>

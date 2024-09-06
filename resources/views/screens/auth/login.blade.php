@@ -9,10 +9,10 @@
                 <p>Vul onderstaande velden in om in te loggen</p>
             </div>
             <form class="w-1/2 m-auto mt-8 flex flex-col gap-4">
-                <input type="email" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="you@example.com">
-                <input type="password" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Minimaal 8 tekens">
+                <input type="email" id="email" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="you@example.com">
+                <input type="password" id="password" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Minimaal 8 tekens">
                 <a href="/register" class="text-secondary-color text-[12px] font-medium text-right">Wachtwoord vergeten?</a>
-                <button class="bg-secondary-color text-white p-3 rounded-md">Login</button>
+                <x-button>Login</x-button>
             </form>
             <p class="text-[12px] mt-8 text-center">Heb je nog geen account? <a href="/register" class="text-secondary-color">Registreren</a></p>
         </div>

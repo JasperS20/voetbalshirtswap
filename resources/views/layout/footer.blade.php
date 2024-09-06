@@ -4,6 +4,6 @@
     </div>
     <div class="px-20 py-2 bg-secondary-color text-white text-[12px] flex flex-row justify-between">
         <p>Copyright © {{date('Y')}} VoetbalShirtsSwap</p>
-        <p>Supported by Jasper Samson</p>
+        <p>❤️ Supported by Jasper Samson</p>
     </div>
 </footer>

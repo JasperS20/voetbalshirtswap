@@ -8,20 +8,17 @@ use Illuminate\View\Component;
 
 class Button extends Component
 {
-    public $color;
-    /**
-     * Create a new component instance.
-     */
-    public function __construct($color = 'secondary-color')
+    public $variant;
+
+    public function __construct($variant = 'primary')
     {
-        $this->color = $color;
+        $this->variant = $variant;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
     public function render(): View|Closure|string
     {
-        return view('components.button');
+        return view('components.button', [
+            'variant' => $this->variant,
+        ]);
     }
 }

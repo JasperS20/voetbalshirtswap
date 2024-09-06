@@ -9,3 +9,4 @@ Route::get('/de-werkwijze', function () {return view('screens.strategy');});
 Route::get('/contact', function () {return view('screens.contact');});
 Route::get('/login', function () {return view('screens.auth.login');});
 Route::get('/register', function () {return view('screens.auth.register');});
+Route::post('')

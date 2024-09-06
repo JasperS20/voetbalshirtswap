@@ -9,10 +9,10 @@
                 <p>Vul onderstaande velden in om een account te maken</p>
             </div>
             <form class="w-1/2 m-auto mt-8 flex flex-col gap-4">
-                <input type="email" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="you@example.com">
-                <input type="password" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Minimaal 8 tekens">
-                <input type="password" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Herhaal je wachtwoord">
-                <button class="bg-secondary-color text-white p-3 rounded-md">Registreren</button>
+                <input type="email" id="email" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="you@example.com">
+                <input type="password" id="password" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Minimaal 8 tekens">
+                <input type="password" id="password-confirmation" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Herhaal je wachtwoord">
+                <x-button>Registreren</x-button>
             </form>
             <p class="text-[12px] mt-8 text-center">Heb je al een account? <a href="/login" class="text-secondary-color">Login</a></p>
         </div>
