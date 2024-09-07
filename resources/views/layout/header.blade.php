@@ -7,7 +7,15 @@
             <li><a href="/de-werkwijze">De Werkwijze</a></li>
             <li><a href="/over-ons">Over Ons</a></li>
             <li><a href="/contact">Contact</a></li>
-            <x-button href="/login">Mijn Account</x-button>
+            @if(\Illuminate\Support\Facades\Auth::check())
+                <li><a href="/mijn-account">Mijn Account</a></li>
+                <form action="{{ route('logout') }}" method="POST" class="m-auto">
+                    {{ csrf_field() }}
+                    <x-button>Uitloggen</x-button>
+                </form>
+            @else
+                <x-button href="/login">Login</x-button>
+            @endif
         </ul>
     </nav>
 </header>

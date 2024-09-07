@@ -6,7 +6,7 @@
 @php
     $classes = $variant === 'primary'
         ? 'bg-secondary-color text-white'
-        : 'bg-on-surface-color text-text-color';
+        : 'bg-on-surface-color text-text-color border border-secondary-color';
 @endphp
 
 @if($href)

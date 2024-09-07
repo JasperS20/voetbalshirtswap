@@ -5,9 +5,9 @@
         <title>VoetbalShirtsSwap - @yield('title')</title>
         @vite(['resources/js/app.js', 'resources/css/app.css'])
     </head>
-    <body>
+    <body class="flex flex-col min-h-screen">
         @include('layout.header')
-        <div class="mx-auto w-4/5">
+        <div class="mx-auto w-4/5 flex-1">
             @yield('content')
         </div>
         @include('layout.footer')
