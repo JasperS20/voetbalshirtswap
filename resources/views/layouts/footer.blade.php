@@ -1,4 +1,4 @@
-<footer class="w-full bottom-0 absolute mt-auto">
+<footer class="w-full mt-10">
     <div class="bg-on-surface-color w-full py-6">
         {{-- Hier zetten we in een on surface kleur de footer neer zoals de pagina's en contact mogelijkheden--}}
     </div>

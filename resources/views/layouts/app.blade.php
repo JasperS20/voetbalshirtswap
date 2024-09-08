@@ -9,9 +9,9 @@
 </head>
 <body class="flex flex-col min-h-screen">
     @include('layouts.header')
-    <div class="mx-auto w-4/5 flex-1">
+    <main class="mx-auto w-4/5 flex-grow">
         @yield('content')
-    </div>
+    </main>
     @include('layouts.footer')
 </body>
 </html>
