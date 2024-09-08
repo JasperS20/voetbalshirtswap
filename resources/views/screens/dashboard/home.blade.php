@@ -1,8 +1,9 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('title', 'Dashboard')
 
 @section('content')
     <div>
-        Het dashboard
+        @include('components.alert')
+        Mijn account
     </div>
 @endsection

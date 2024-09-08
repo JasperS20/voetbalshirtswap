@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('title', 'Login')
 
 @section('content')
@@ -10,12 +10,17 @@
             </div>
             <form class="w-1/2 m-auto mt-8 flex flex-col gap-4" action="{{ route('login-user') }}" method="POST">
                 {{ csrf_field() }}
-                <input type="email" id="email" name="email" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="you@example.com">
-                <input type="password" id="password" name="password" class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Minimaal 8 tekens">
-                <a href="/register" class="text-secondary-color text-[12px] font-medium text-right">Wachtwoord vergeten?</a>
+                <input type="email" id="email" name="email"
+                       class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="you@example.com">
+                <input type="password" id="password" name="password"
+                       class="text-text-color rounded-md p-2 bg-primary-color w-full" placeholder="Minimaal 8 tekens">
+                <a href="/register" class="text-secondary-color text-[12px] font-medium text-right">Wachtwoord
+                    vergeten?</a>
                 <x-button>Login</x-button>
             </form>
-            <p class="text-[12px] mt-8 text-center">Heb je nog geen account? <a href="/registreren" class="text-secondary-color">Registreren</a></p>
+            <p class="text-[12px] mt-8 text-center">Heb je nog geen account? <a href="/registreren"
+                                                                                class="text-secondary-color">Registreren</a>
+            </p>
         </div>
     </div>
 @endsection

@@ -39,8 +39,7 @@ class UserController extends Controller
         $data = $request->all();
         $this->create($data);
 
-        //return redirect('dashboard')->with('success', 'Registration Successful!');
-        return view('screens.home');
+        return redirect()->route('login')->with('success', 'You created an account! Now log in with you credentials');
     }
 
     public function create(array $data) {
@@ -50,9 +49,31 @@ class UserController extends Controller
         ]);
     }
 
+    public function completeRegistration(Request $request) {
+        $validatedData = $request->validate([
+            'firstname'   => 'required|string|max:255',
+            'middlename'  => 'nullable|string|max:255',
+            'lastname'    => 'required|string|max:255',
+            'region'      => 'required|string|max:255',
+            'city'        => 'required|string|max:255',
+            'streetname'  => 'required|string|max:255',
+            'housenumber' => 'required|integer',
+            'zip_code'    => 'required|string|max:6',
+        ]);
+
+        $user = Auth::user();
+        $user->fill($validatedData);
+
+        if ($user->save()) {
+            return redirect()->route('dashboard')->with('success', 'You completed your account setup!');
+        }
+
+        return redirect()->back()->with('error', 'Failed to complete account setup. Please try again.');
+    }
+
     public function dashboard() {
         $user = Auth::user();
-        if ($user->name === null) {
+        if ($user->firstname === null) {
             return view('screens.auth.complete-registration', ['user' => $user]);
         }
         if(Auth::check()) {
